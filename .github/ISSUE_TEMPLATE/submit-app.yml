@@ -1,0 +1,149 @@
+name: 推荐一款软件
+description: 推荐一款你在 AI 时代真正用过的软件，编辑实测后会整理进周刊。
+title: "[推荐] "
+# Create this label in the repository first (Issues → Labels), otherwise it is skipped.
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 推荐前请先确认
+
+        - 你**自己用过**这款软件，能说清具体的使用场景。
+        - 它不是套壳产品、破解版或纯营销页面。
+        - 你愿意接受编辑实测、改写与去重；**提交不等于一定收录**。
+        - 本项目**不接受付费推广**，请如实填写利益声明。
+
+        填写越具体，越容易被收录。参考标准见仓库 README 的「收录标准」。
+
+  - type: input
+    id: app-name
+    attributes:
+      label: 软件名称
+      description: 使用官方名称，不要填昵称、代号或推广名。
+      placeholder: 例如：Raycast
+    validations:
+      required: true
+
+  - type: input
+    id: app-url
+    attributes:
+      label: 官网 / 下载地址
+      description: 优先填写官网，避免第三方下载站和网盘链接。
+      placeholder: https://
+    validations:
+      required: true
+
+  - type: textarea
+    id: one-liner
+    attributes:
+      label: 一句话介绍
+      description: 30 字以内，说清它是做什么的。
+      placeholder: 例如：把 macOS 上散落的一切，收进一个快捷键。
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-solved
+    attributes:
+      label: 它解决了什么问题
+      description: 请写具体场景，100 字以上。最好说明「以前怎么做、现在怎么做」，以及它替你省下了什么。
+      placeholder: |
+        以前我……
+        现在我……
+        最大的变化是……
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platforms
+    attributes:
+      label: 支持平台
+      description: 可多选。
+      multiple: true
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - iOS
+        - Android
+        - Web
+        - 浏览器插件
+        - 命令行 / CLI
+        - 其他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pricing
+    attributes:
+      label: 价格模式
+      options:
+        - 完全免费
+        - 免费增值（Freemium）
+        - 一次性买断
+        - 订阅制
+        - 开源 / 自托管
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: pricing-detail
+    attributes:
+      label: 价格说明
+      description: 付费或订阅请注明大致价格；免费可留空。
+      placeholder: 例如：Pro $8/月起，个人免费版够用
+    validations:
+      required: false
+
+  - type: input
+    id: usage-duration
+    attributes:
+      label: 你用了多久
+      description: 用了多久、是否每天都在用，会直接影响编辑的判断。
+      placeholder: 例如：3 个月，工作日每天使用
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截图或录屏
+      description: 可选。直接把图片拖进输入框，或粘贴图片 / 视频链接。一张能说明核心界面的图即可。
+      placeholder: 拖入图片，或粘贴链接
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: conflict-of-interest
+    attributes:
+      label: 利益声明
+      description: 必填。请选择所有适用项；如有利益关联，请在下方「补充说明」中写清楚。
+      options:
+        - label: 我与该项目没有任何利益关联
+        - label: 我是该项目的作者、员工或投资人
+        - label: 我参与了付费推广或有返佣关系
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra-notes
+    attributes:
+      label: 补充说明
+      description: 可选。竞品对比、已知缺点、隐私或数据归属情况、需要注意的坑，都可以写在这里。
+      placeholder: 例如：缺点是移动端体验一般；数据默认存在本地。
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我确实使用过这款软件，以上描述基于真实体验
+          required: true
+        - label: 我理解提交不保证收录，编辑可能改写推荐语或合并重复条目
+          required: true
+        - label: 我确认这不是破解版、盗版资源或纯营销内容
+          required: true
