@@ -116,6 +116,7 @@ AI 让软件的供给爆炸了：每天都有新的 "AI + 某场景" 产品上�
 ```text
 .
 ├── README.md              # 本文件：项目说明 + 期号索引
+├── LICENSE                # 许可协议（CC BY-NC-SA 4.0）
 ├── docs/                  # 每期内容，一期一个 Markdown 文件
 │   ├── issue-001.md
 │   └── issue-002.md
@@ -153,5 +154,5 @@ AI 让软件的供给爆炸了：每天都有新的 "AI + 某场景" 产品上�
 
 ## 许可
 
-- 本站文字内容采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans) 许可：可自由转载，需署名、非商业用途、相同方式共享。
+- 本站文字内容采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans) 许可：可自由转载，需署名、非商业用途、相同方式共享。完整协议文本见 [LICENSE](LICENSE)。
 - 所推荐软件的版权归各自作者所有；推荐语仅代表编辑与推荐人的使用感受。
